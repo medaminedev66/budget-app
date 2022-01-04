@@ -1,0 +1,11 @@
+<header class="header">
+  <nav>
+    <div class="header__backbtn">
+      <%= link_to '', '/', class: "fas fa-arrow-left fa-lg text-reset text-decoration-none"%>
+    </div>
+    <p class="text-reset fs-3"><%= var%></p>
+    <div class="header__login">
+      <%= button_to "#{action}" , '', onclick: "this.f.submit();", class:"btn text-reset"%>
+    </div>
+  </nav>
+</header>
