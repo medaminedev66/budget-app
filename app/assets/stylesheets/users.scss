@@ -27,21 +27,21 @@
 }
 
 .home {
-  background-color: green;
+  background-color: rgb(241, 241, 241);
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+//   align-items: center;
 }
 
 .sessions {
   display: flex;
   flex-direction: column;
-  justify-self: end;
+  justify-self: flex-end;
 }
 
 .logo {
-  justify-self: center;
+  align-self: center;
 }
