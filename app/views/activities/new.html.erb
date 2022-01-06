@@ -16,7 +16,7 @@
   <%= f.number_field :amount, placeholder: 'Amount', id:"amount", class:"form-control" %>
   <div class="field form-control d-flex flex-column">
     <%= f.label :Category, class:"form-label" %><br />
-    <%= f.collection_select(:group_ids, Group.all, :id, :name, { prompt: false }, { multiple: false, required: true }) %>
+    <%= f.collection_select(:group_ids, Group.all, :id, :name, { prompt: false }, { multiple: true, required: true }) %>
   </div> 
 
   <div class="actions">
