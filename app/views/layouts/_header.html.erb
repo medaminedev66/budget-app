@@ -6,9 +6,9 @@
     <p class="text-reset fs-3"><%= var%></p>
     <div class="header__login">
       <% if action != nil %>
-        <%= button_to "#{action}" , '/', onclick: "this.f.submit();", class:"btn text-reset"%>
+        <%= button_to "#{action}" , '', onclick: "this.f.submit();", class:"btn text-reset"%>
       <% else %>
-        <%= link_to "#{aclink}" , path, class:"btn text-reset"%>
+        <%= link_to "#{aclink}" , path_to, class:"btn text-reset"%>
       <%end%>
     </div>
   </nav>

@@ -1,2 +1,23 @@
-<h1>Groups#new</h1>
-<p>Find me in app/views/groups/new.html.erb</p>
+<%= render 'layouts/header', var: "Add Group", action: "Add", aclink: nil, path: groups_path %>
+<div class="groups">
+<div class="form d-md-block">
+<br>
+<%= form_with(model: @group, url: groups_path) do |f| %>
+  <% if @group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
+      <ul>
+        <% @group.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.text_field :name, placeholder: 'Name', id:"name", class:"form-control" %>
+  <div class="actions">
+    <%= f.submit class: 'add-btn'%>
+  </div>
+  <br>
+<% end %>
+</div>
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_03_115626) do
+ActiveRecord::Schema.define(version: 2022_01_06_095323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,13 +24,11 @@ ActiveRecord::Schema.define(version: 2022_01_03_115626) do
     t.index ["author_id"], name: "index_activities_on_author_id"
   end
 
-  create_table "assignments", force: :cascade do |t|
-    t.bigint "activity_id", null: false
-    t.bigint "group_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["activity_id"], name: "index_assignments_on_activity_id"
-    t.index ["group_id"], name: "index_assignments_on_group_id"
+  create_table "activities_groups", id: false, force: :cascade do |t|
+    t.bigint "group_id"
+    t.bigint "activity_id"
+    t.index ["activity_id"], name: "index_activities_groups_on_activity_id"
+    t.index ["group_id"], name: "index_activities_groups_on_group_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -56,7 +54,5 @@ ActiveRecord::Schema.define(version: 2022_01_03_115626) do
   end
 
   add_foreign_key "activities", "users", column: "author_id"
-  add_foreign_key "assignments", "activities"
-  add_foreign_key "assignments", "groups"
   add_foreign_key "groups", "users"
 end

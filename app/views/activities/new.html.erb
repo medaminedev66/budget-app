@@ -1,0 +1,28 @@
+<%= render 'layouts/header', var: "Add Group", action: "Add", aclink: nil, path: groups_path %>
+
+
+<div class="groups">
+  <%= form_with model: @activity do |f| %>
+  <% if @activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+      <ul>
+        <% @activity.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.text_field :name, placeholder: 'Name', id:"name", class:"form-control" %>
+  <%= f.number_field :amount, placeholder: 'Amount', id:"amount", class:"form-control" %>
+  <div class="mb-3 col-sm-8">
+    <%= f.label :Category, class:"form-label" %><br />
+    <%= f.collection_select(:group_ids, Group.all, :id, :name, { prompt: true }, { multiple: true, required: true }) %>
+  </div> 
+
+  <div class="actions">
+    <%= f.submit 'Add transaction', class: 'add-btn'%>
+  </div>
+  <br>
+<% end %>
+</div>

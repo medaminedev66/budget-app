@@ -20,7 +20,7 @@
   <div class="field">
     <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password confirmation", class:"input" %>
   </div>
-  <%= render 'layouts/header', var: "REGISTER", action: "Next"%>
+  <%= render 'layouts/header', path: '/', var: "REGISTER", action: "Next"%>
 <% end %>
 <%= render "devise/shared/links" %>
 </div>
