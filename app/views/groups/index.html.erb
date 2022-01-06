@@ -1,4 +1,4 @@
-<%= render 'layouts/header', var: "GROUPS", action: nil, aclink: "New group", path: groups_path, path_to: new_group_path %>
+<%= render 'layouts/header', var: "GROUPS", action: nil, aclink: "New group", path: groups_path, path_to: new_group_path, signout: "yes"%>
 <div class="groups">
 <% @groups.each do |group| %>
 <div class="group">
@@ -21,4 +21,4 @@
 </div>
 <%end%>
 </div>
-<%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-outline-success" %>
+

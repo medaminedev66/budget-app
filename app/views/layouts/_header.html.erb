@@ -1,12 +1,17 @@
 <header class="header">
   <nav>
     <div class="header__backbtn">
+    <% if signout == "yes" %>
+      <%= link_to '', destroy_user_session_path, method: :delete, class: "fas fa-sign-out-alt fa-lg text-reset text-decoration-none" %>
+    <% else %>
       <%= link_to '', path, class: "fas fa-arrow-left fa-lg text-reset text-decoration-none"%>
+    <% end %>
     </div>
     <p class="text-reset fs-3"><%= var%></p>
     <div class="header__login">
       <% if action != nil %>
-        <%= button_to "#{action}" , '', onclick: "this.f.submit();", class:"btn text-reset"%>
+        <%= button_to "#{action}", onclick: "this.f.submit();", class:"btn text-reset"%>
+      <% elsif aclink == nil %>
       <% else %>
         <%= link_to "#{aclink}" , path_to, class:"btn text-reset"%>
       <%end%>

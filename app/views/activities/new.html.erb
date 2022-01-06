@@ -1,5 +1,4 @@
-<%= render 'layouts/header', var: "Add Group", action: "Add", aclink: nil, path: groups_path %>
-
+<%= render 'layouts/header', var: "Add Transaction", action: nil, aclink: nil, path: groups_path, signout: "no" %>
 
 <div class="groups">
   <%= form_with model: @activity do |f| %>
@@ -15,9 +14,9 @@
   <% end %>
   <%= f.text_field :name, placeholder: 'Name', id:"name", class:"form-control" %>
   <%= f.number_field :amount, placeholder: 'Amount', id:"amount", class:"form-control" %>
-  <div class="mb-3 col-sm-8">
+  <div class="field form-control d-flex flex-column">
     <%= f.label :Category, class:"form-label" %><br />
-    <%= f.collection_select(:group_ids, Group.all, :id, :name, { prompt: true }, { multiple: true, required: true }) %>
+    <%= f.collection_select(:group_ids, Group.all, :id, :name, { prompt: false }, { multiple: false, required: true }) %>
   </div> 
 
   <div class="actions">

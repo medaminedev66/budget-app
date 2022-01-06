@@ -1,3 +1,6 @@
+<% if user_signed_in? %>
+  <% controller.redirect_to groups_path %>
+<% else %>
 <div class="home">
   <div class="logo">
     <img src="<%= asset_path( 'test.png' ) %>" alt="">
@@ -7,3 +10,4 @@
     <%= link_to "Sign up", new_user_registration_path, class: "btn btn-lg"%>
   </div>
 </div>
+<%end%>
