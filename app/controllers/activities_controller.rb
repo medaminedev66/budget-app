@@ -1,9 +1,9 @@
 class ActivitiesController < ApplicationController
   def index
     @category = Group.find_by(id: params[:group_id])
-    @testal = Activity.includes(:groups).where("groups.id = #{params[:group_id]}").references(:groups)
+    @transactions = Activity.includes(:groups).where("groups.id = #{params[:group_id]}").references(:groups)
     @total_amount = 0
-    @testal.each do |activity|
+    @transactions.each do |activity|
       @total_amount += activity.amount
     end
   end

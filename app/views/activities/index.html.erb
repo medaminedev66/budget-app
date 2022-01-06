@@ -13,7 +13,8 @@
     <p>TOTAL PAYMENT: </p>
     <p><%= @total_amount %></p>
   </div>
-  <% @testal.each do |activity|%>
+  <% @transactions.each do |activity|%>
+  <% if can? :read, activity %>
   <div class="transaction">
     <div class="transaction-info">
       <p class="transaction-id">Transaction №: <%= activity.id%></p>
@@ -24,5 +25,6 @@
       <p><%= activity.amount %></p>
     </div>
   </div>
+  <% end %>
   <% end %>
 </div>
