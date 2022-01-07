@@ -26,7 +26,6 @@
     display: flex;
     align-items: center;
     padding: 0.5rem 1.5rem;
-    // border: 0.5px solid;
     box-shadow: 0px 0px 8px #dddddd;
     margin: 1rem 0.5rem;
 
@@ -45,7 +44,7 @@
       height: 5rem;
       width: 5rem;
   
-      img {
+      .img {
         height: 5rem;
         width: 5rem;
       }

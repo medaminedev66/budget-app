@@ -3,7 +3,7 @@
 <% @groups.each do |group| %>
     <div class="group">
       <div class="group-logo">
-        <img src="<%= group.icon %>" alt="">
+      <%= image_tag group.icon, class: "img" %>
       </div>
       <div class="group-info">
        <div>
