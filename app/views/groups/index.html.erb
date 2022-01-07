@@ -3,14 +3,13 @@
 <% @groups.each do |group| %>
     <div class="group">
       <div class="group-logo">
-        <img src=<%= group.icon %> alt="">
+        <img src="<%= group.icon %>" alt="">
       </div>
       <div class="group-info">
        <div>
         <%= link_to "#{group.name}", activities_home_path(group.id), class: "group-name" %>
-        <% @transactions = Activity.includes(:groups).where("groups.id = #{group.id}").references(:groups) %>
         <% @total_amount = 0%>
-        <% @transactions.each do |activity|%>
+        <% group.activities.each do |activity|%>
         <%   @total_amount += activity.amount%>
         <% end %>
        </div>
