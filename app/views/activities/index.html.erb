@@ -11,7 +11,7 @@
   </div>
   <div class="total-amount">
     <p>TOTAL PAYMENT: </p>
-    <p><%= @total_amount %></p>
+    <p>$<%= @total_amount %></p>
   </div>
   <% @transactions.each do |activity|%>
   <% if can? :read, activity %>
@@ -21,9 +21,13 @@
       <p class="transaction-id"><%= activity.name%></p>
     </div>
     <div class="trans-date">
-      <i class="fas fa-calendar-week">   12/12/2012</i>
-      <p><%= activity.amount %></p>
+    <div class="date-a">
+      <i class="fas fa-calendar-week"></i>
+      <p><%= activity.created_at %></p>
     </div>
+      <p>$<%= activity.amount %></p>
+    </div>
+
   </div>
   <% end %>
   <% end %>
