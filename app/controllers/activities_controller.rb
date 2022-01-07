@@ -18,15 +18,14 @@ class ActivitiesController < ApplicationController
     @activity = Activity.new(activity_params)
     @activity.author_id = current_user.id
     if @activity.save
-      flash[:success] = "Object successfully created"
-      # Assignment.create(activity_id: @activity.id, group_id: params[:group_id])
+      flash[:success] = 'Object successfully created'
       redirect_to activities_home_path(@activity.groups.first.id)
     else
-      flash[:error] = "Something went wrong"
+      flash[:error] = 'Something went wrong'
       render 'new'
     end
   end
-  
+
   private
 
   def activity_params

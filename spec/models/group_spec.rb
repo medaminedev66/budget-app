@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Group, type: :model do
   let(:user) { User.create(name: 'Amine', email: 'example@mail.com', password: 'password') }
-  let(:group) { Group.create(user_id: user.id, name: 'Apple', icon: "") }
+  let(:group) { Group.create(user_id: user.id, name: 'Apple', icon: '') }
 
   describe 'Validations' do
     context 'when valid' do

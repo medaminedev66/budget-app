@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature 'Groups Index', type: :feature do
   before(:each) do
     @user = User.create(name: 'Testing', email: 'user@example.com', password: 'password')
-    @group = Group.create(user: @user, name: 'Amazon', icon: "icon_url.png")
+    @group = Group.create(user: @user, name: 'Amazon', icon: 'icon_url.png')
     visit groups_path
     fill_in 'email', with: 'user@example.com'
     fill_in 'pwd', with: 'password'
@@ -24,7 +24,7 @@ RSpec.feature 'Groups Index', type: :feature do
   end
 
   it 'show the total ammount of the group' do
-    expect(page).to have_content "$0"
+    expect(page).to have_content '$0'
   end
 
   it 'Navigate to the transactions page of the group' do

@@ -15,7 +15,7 @@ RSpec.describe Activity, type: :model do
     end
 
     it 'should allow valid name' do
-      activity.name = "Sell"
+      activity.name = 'Sell'
       expect(activity).to be_valid
     end
 

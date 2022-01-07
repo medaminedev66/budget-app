@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature 'Transactions Index', type: :feature do
   before(:each) do
     @user = User.create(name: 'Testing', email: 'user@example.com', password: 'password')
-    @group = Group.create(user: @user, name: 'Amazon', icon: "icon_url.png")
+    @group = Group.create(user: @user, name: 'Amazon', icon: 'icon_url.png')
     @first_activity = Activity.create(author_id: @user.id, name: 'Product', amount: 13, group_ids: @group.id)
     @second_activity = Activity.create(author_id: @user.id, name: 'Mouse', amount: 20, group_ids: @group.id)
     visit groups_path
@@ -30,10 +30,10 @@ RSpec.feature 'Transactions Index', type: :feature do
   end
 
   it 'shows the total amount of the group' do
-    expect(page).to have_content "$13"
+    expect(page).to have_content '$13'
   end
 
   it 'shows the total ammount of the group' do
-    expect(page).to have_content "$33"
+    expect(page).to have_content '$33'
   end
 end

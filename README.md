@@ -10,6 +10,10 @@
 - Bootstrap
 - SASS
 
+## Demo
+
+- [Demo link](https://medamine-budget-app.herokuapp.com/)
+
 ## Entity Relationship Diagram
 
 ![screenshot](./app/assets/images/erd_diagram.png)

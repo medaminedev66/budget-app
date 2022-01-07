@@ -4,26 +4,30 @@
 @import "variables";
 
 .transactions {
-  margin: 5rem 0.5rem 4rem 0.5rem;
+  margin: 5rem 0.5rem;
   padding: 0.5rem;
   color: $text;
+
   .group-detail {
     border-bottom: 1px solid $text;
+
     .group-info {
       display: flex;
       gap: 1rem;
       align-items: center;
       margin-bottom: 0.5rem;
+
       img {
         height: 3rem;
-        width: 3rem; 
+        width: 3rem;
       }
+
       p {
         font-size: 20px;
       }
     }
   }
-  
+
   .total-amount {
     display: flex;
     justify-content: space-between;
@@ -33,24 +37,26 @@
 
   .transaction {
     margin: 0.5rem 0;
-    p {
-      margin: none;
-    }
+
     .transaction-info {
       display: flex;
       justify-content: space-between;
+
       .transaction-id {
         font-weight: 500;
       }
     }
+
     .trans-date {
       .date-a {
         display: flex;
-        gap: 0.5rem
+        gap: 0.5rem;
       }
+
       display: flex;
       justify-content: space-between;
     }
+
     border-bottom: 1px solid $text;
   }
 }
