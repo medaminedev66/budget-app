@@ -8,9 +8,8 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.new(params.require(:group).permit(:name))
+    @group = Group.new(params.require(:group).permit(:name, :icon))
     @group.user_id = current_user.id
-    @group.icon = "https://cdn2.iconfinder.com/data/icons/miscellaneous-6-solid/128/demo_exhibition_demonstration-512.png"
     if @group.save
       flash[:success] = "Group successfully added"
       redirect_to groups_path
