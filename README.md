@@ -93,3 +93,4 @@ Contributions, issues, and feature requests are welcome!
 ## Acknowledgments
 
 - Microverse for giving me this chance
+- The design template provider [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
