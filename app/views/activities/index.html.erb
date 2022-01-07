@@ -2,8 +2,8 @@
 <div class="transactions">
   <div class="group-detail">
     <div class="group-info">
-      <img src="<%= @category.icon %>" alt="">
-      <p><%= @category.name%></p>
+      <img src="<%= @group.icon %>" alt="">
+      <p><%= @group.name%></p>
     </div>
     <div class="group-desc">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt rerum nisi dolorem! Iure, dolorum iste debitis, laborum quam quae sunt suscipit temporibus repellendus qui quaerat quis quos ipsum harum corporis!</p>
@@ -11,9 +11,9 @@
   </div>
   <div class="total-amount">
     <p>TOTAL PAYMENT: </p>
-    <p>$<%= @total_amount %></p>
+    <p>$<%= @group.total %></p>
   </div>
-  <% @transactions.each do |activity|%>
+  <% @group.activities.each do |activity|%>
   <% if can? :read, activity %>
   <div class="transaction">
     <div class="transaction-info">

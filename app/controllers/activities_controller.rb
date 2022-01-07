@@ -1,20 +1,14 @@
 class ActivitiesController < ApplicationController
   def index
-    @category = Group.find_by(id: params[:group_id])
-    @transactions = Activity.includes(:groups).where("groups.id = #{params[:group_id]}").references(:groups)
-    @total_amount = 0
-    @transactions.each do |activity|
-      @total_amount += activity.amount
-    end
+    @group = Group.find_by(id: params[:group_id])
   end
 
   def new
     @activity = Activity.new
-    @groups_list = Group.where(user_id: current_user.id)
+    @groups = current_user.groups.all
   end
 
   def create
-    @groups_list = Group.where(user_id: current_user.id)
     @activity = Activity.new(activity_params)
     @activity.author_id = current_user.id
     if @activity.save
