@@ -8,13 +8,9 @@
       <div class="group-info">
        <div>
         <%= link_to group.name, activities_home_path(group.id), class: "group-name" %>
-        <% @total_amount = 0%>
-        <% group.activities.each do |activity|%>
-        <%   @total_amount += activity.amount%>
-        <% end %>
        </div>
        <div>
-         <p class="total">$<%=@total_amount%></p>
+         <p class="total">$<%= group.total %></p>
        </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   def index
-    @groups = Group.includes(:activities).where(user_id: current_user.id)
+    @groups = current_user.groups.all
   end
 
   def new
