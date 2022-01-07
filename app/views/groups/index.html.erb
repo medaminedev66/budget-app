@@ -4,11 +4,11 @@
 <% @groups.each do |group| %>
     <div class="group">
       <div class="group-logo">
-      <%= image_tag group.icon, class: "img" %>
+      <img src="<%= group.icon%>" alt="">
       </div>
       <div class="group-info">
        <div>
-        <%= link_to group.name, activities_home_path(group.id), class: "group-name" %>
+        <%= link_to group.name, activities_home_path(group.id), class: "group-name", id: "group_#{group.id}" %>
        </div>
        <div>
          <p class="total">$<%= group.total %></p>

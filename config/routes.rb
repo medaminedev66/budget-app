@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'activities/index'
   get 'activities/new'
-  get '/', to: 'users#index'
+  root to: 'users#index'
   devise_for :users
   resources :groups, only: [:new, :index, :create]
   resources :activities, only: [:new, :create]
