@@ -2,7 +2,10 @@
   <nav>
     <div class="header__backbtn">
     <% if signout == "yes" %>
+    <div class="logout">
       <%= link_to '', destroy_user_session_path, method: :delete, class: "fas fa-sign-out-alt fa-lg text-reset text-decoration-none" %>
+      <p class="lg-o">Log out</p>
+    </div>
     <% else %>
       <%= link_to '', path, class: "fas fa-arrow-left fa-lg text-reset text-decoration-none"%>
     <% end %>

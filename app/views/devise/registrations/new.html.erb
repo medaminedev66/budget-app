@@ -1,6 +1,6 @@
 <div class="signup">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  
+
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="field">
     <%= f.text_field :name, autofocus: true, placeholder: "Full name", class:"input"%>
@@ -22,6 +22,6 @@
   </div>
   <%= render 'layouts/header', path: '/', var: "REGISTER", action: "Next", signout: "no"%>
 <% end %>
-<%= render "devise/shared/links" %>
+<%# render "devise/shared/links" %>
 </div>
 

@@ -27,12 +27,22 @@ body {
   &__backbtn {
     color: white;
   }
-
+  
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
+    
+    .logout {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      .lg-o {
+        font-size: 14px;
+      }
+    }
 
     p {
       font-size: 20px;
@@ -40,5 +50,7 @@ body {
     }
   }
 }
+
+
 
 

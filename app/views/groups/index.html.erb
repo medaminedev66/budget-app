@@ -1,5 +1,6 @@
 <%= render 'layouts/header', var: "GROUPS", action: nil, aclink: "New group", path: groups_path, path_to: new_group_path, signout: "yes"%>
 <div class="groups">
+<%= render 'layouts/msg'%>
 <% @groups.each do |group| %>
     <div class="group">
       <div class="group-logo">

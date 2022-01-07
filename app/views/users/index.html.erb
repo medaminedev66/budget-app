@@ -2,6 +2,7 @@
   <% controller.redirect_to groups_path %>
 <% else %>
 <div class="home">
+  <%= render 'layouts/msg'%>
   <div class="logo">
     <img src="<%= asset_path( 'test.png' ) %>" alt="">
   </div>
