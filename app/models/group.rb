@@ -7,4 +7,8 @@ class Group < ApplicationRecord
   def total
     activities.sum(:amount)
   end
+
+  def ordered_activities
+    activities.order(created_at: :desc)
+  end
 end

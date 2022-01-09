@@ -13,7 +13,7 @@
     <p>TOTAL PAYMENT: </p>
     <p>$<%= @group.total %></p>
   </div>
-  <% @group.activities.each do |activity|%>
+  <% @group.ordered_activities.each do |activity|%>
   <% if can? :read, activity %>
   <div class="transaction">
     <div class="transaction-info">
