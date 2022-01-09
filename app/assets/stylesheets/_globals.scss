@@ -52,5 +52,15 @@ body {
       font-size: 20px;
       margin: 0;
     }
+    
+    .header__login{
+      width: 100px;
+      text-align: center;
+      .new-btn {
+        text-decoration: none;
+        width: 20px;
+        text-align: center;
+      }
+    }
   }
 }
