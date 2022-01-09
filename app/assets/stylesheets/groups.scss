@@ -1,0 +1,54 @@
+// Place all the styles related to the Groups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "variables";
+
+.groups {
+  margin-top: 5rem;
+
+  .add-btn {
+    background-color: $second;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+  }
+
+  .add-btn:active {
+    background-color: lightgreen;
+  }
+
+  .group {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 0 8px #ddd;
+    margin: 1rem 0.5rem;
+
+    .group-info {
+      display: flex;
+      justify-content: space-between;
+      color: $text;
+      width: 100%;
+
+      .group-name {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    .group-logo {
+      height: 5rem;
+      width: 5rem;
+
+      img {
+        height: 5rem;
+        width: 5rem;
+      }
+    }
+  }
+}

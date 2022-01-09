@@ -1,0 +1,33 @@
+<%= render 'layouts/header', var: "Transactions", action: nil, aclink: "New Transaction", path: groups_path, path_to: new_activity_path, signout: "no" %>
+<div class="transactions">
+  <div class="group-detail">
+    <div class="group-info">
+      <img src="<%= @group.icon %>" alt="">
+      <p><%= @group.name%></p>
+    </div>
+    <div class="group-desc">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt rerum nisi dolorem! Iure, dolorum iste debitis, laborum quam quae sunt suscipit temporibus repellendus qui quaerat quis quos ipsum harum corporis!</p>
+    </div>
+  </div>
+  <div class="total-amount">
+    <p>TOTAL PAYMENT: </p>
+    <p>$<%= @group.total %></p>
+  </div>
+  <% @group.ordered_activities.each do |activity|%>
+  <% if can? :read, activity %>
+  <div class="transaction">
+    <div class="transaction-info">
+      <p class="transaction-id">Transaction №: <%= activity.id%></p>
+      <p class="transaction-id"><%= activity.name%></p>
+    </div>
+    <div class="trans-date">
+    <div class="date-a">
+      <i class="fas fa-calendar-week"></i>
+      <p><%= activity.created_at %></p>
+    </div>
+      <p>$<%= activity.amount %></p>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
+</div>

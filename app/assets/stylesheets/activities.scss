@@ -1,0 +1,62 @@
+// Place all the styles related to the Activities controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "variables";
+
+.transactions {
+  margin: 5rem 0.5rem;
+  padding: 0.5rem;
+  color: $text;
+
+  .group-detail {
+    border-bottom: 1px solid $text;
+
+    .group-info {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 0.5rem;
+
+      img {
+        height: 3rem;
+        width: 3rem;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .total-amount {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $text;
+    margin: 0.5rem 0;
+  }
+
+  .transaction {
+    margin: 0.5rem 0;
+
+    .transaction-info {
+      display: flex;
+      justify-content: space-between;
+
+      .transaction-id {
+        font-weight: 500;
+      }
+    }
+
+    .trans-date {
+      .date-a {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      display: flex;
+      justify-content: space-between;
+    }
+
+    border-bottom: 1px solid $text;
+  }
+}

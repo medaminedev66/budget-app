@@ -1,0 +1,20 @@
+<%= render 'layouts/header', var: "GROUPS", action: nil, aclink: "New group", path: groups_path, path_to: new_group_path, signout: "yes"%>
+<div class="groups">
+<%= render 'layouts/msg'%>
+<% @groups.each do |group| %>
+    <div class="group">
+      <div class="group-logo">
+      <img src="<%= group.icon%>" alt="">
+      </div>
+      <div class="group-info">
+       <div>
+        <%= link_to group.name, activities_home_path(group.id), class: "group-name", id: "group_#{group.id}" %>
+       </div>
+       <div>
+         <p class="total">$<%= group.total %></p>
+       </div>
+      </div>
+    </div>
+<%end%>
+</div>
+

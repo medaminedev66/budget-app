@@ -1,0 +1,24 @@
+<div class="signup">
+<%= render 'layouts/msg' %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input", id:"email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "input", id:"pwd" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <%= render 'layouts/header', path: '/', var: "LOGIN", action: "log in", aclink: nil, signout: "no"%>
+
+  <%= f.submit "Log in" , class:"btn btn-primary form-control invisible"%>
+<% end %>
+</div>
