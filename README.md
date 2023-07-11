@@ -1,6 +1,6 @@
-# Recipe App
+# Budget App
 
-> The Budget app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+> The Budget app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category so that you can see how much money you spent and on what.
 
 <img src="./app/assets/images/Pixel-1.png" alt="drawing" width="360px"/>  <img src="./app/assets/images/Pixel.png" alt="drawing" width="360px"/>
 ## Built With
@@ -12,8 +12,8 @@
 - SASS
 
 ## Demo
-
-- [Demo link](https://medamine-budget-app.herokuapp.com/)
+My Heroku account is currently closed. I am actively searching for alternatives to Heroku.
+- [Demo link](https://medamine-budget-app.herokuapp.com/) 
 
 ## Entity Relationship Diagram
 
